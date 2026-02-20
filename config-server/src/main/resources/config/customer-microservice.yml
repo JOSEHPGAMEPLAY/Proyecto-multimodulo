@@ -1,10 +1,12 @@
-mongodb:
-  host: localhost
-  port: 27017
-  database: customer_db
-  username: root
-  password: pass
-  authentication-database: admin
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customer_db
+      username: root
+      password: pass
+      authentication-database: admin
 
 server:
   port: 8091
