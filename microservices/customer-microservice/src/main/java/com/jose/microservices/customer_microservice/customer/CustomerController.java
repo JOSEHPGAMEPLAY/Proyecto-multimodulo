@@ -15,7 +15,7 @@ public class CustomerController {
     private final CustomerService service;
 
     @PostMapping
-    public ResponseEntity<String> createCustomer(@RequestBody @Valid CustomerRequest request) {
+    public ResponseEntity<String> createCustomer(@Valid @RequestBody CustomerRequest request) {
         return ResponseEntity.ok(service.saveCustomer(request));
     }
 
@@ -30,7 +30,7 @@ public class CustomerController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> updateCustomer(@RequestBody @Valid CustomerRequest request){
+    public ResponseEntity<Void> updateCustomer(@Valid @RequestBody CustomerRequest request){
         service.saveCustomer(request);
         return ResponseEntity.accepted().build();
     }

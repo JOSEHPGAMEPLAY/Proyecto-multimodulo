@@ -2,14 +2,18 @@ package com.jose.microservices.customer_microservice.customer;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public record CustomerRequest(
         String id,
-        @NotBlank(message = "First Name is required")
+        @NotNull(message = "First name is required")
+        @NotBlank(message = "First name cannot be blank")
         String firstName,
-        @NotBlank(message = "Last Name is required")
+        @NotNull(message = "Last name is required")
+        @NotBlank(message = "Last name cannot be blank")
         String lastName,
-        @NotBlank(message = "Email is required")
+        @NotNull(message = "Email is required")
+        @NotBlank(message = "Email cannot be blank")
         @Email(message = "Email is not valid")
         String email,
         String phone,
