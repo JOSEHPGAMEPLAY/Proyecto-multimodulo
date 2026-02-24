@@ -8,5 +8,18 @@ spring:
       password: pass
       authentication-database: admin
 
+logging:
+  level:
+    root: INFO
+    com.jose.microservices: WARN
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file:
+    name: logs/customer-microservice.log
+    max-size: 10MB
+    max-history: 30
+
+
 server:
   port: 8091
