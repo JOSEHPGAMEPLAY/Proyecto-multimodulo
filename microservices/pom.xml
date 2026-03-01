@@ -10,12 +10,14 @@
     </parent>
     <groupId>com.jose.microservices</groupId>
     <artifactId>microservices</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <name>microservices</name>
     <description></description>
     <packaging>pom</packaging>
     <modules>
         <module>customer-microservice</module>
         <module>common-exceptions</module>
+        <module>product-microservice</module>
     </modules>
     <properties>
         <spring-cloud.version>2025.1.1</spring-cloud.version>

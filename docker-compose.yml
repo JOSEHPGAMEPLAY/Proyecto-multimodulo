@@ -1,5 +1,36 @@
 services:
+  mongodb:
+    image: mongo
+    container_name: mongodb-multimodule
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb:/data/db
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+
+  postgresql:
+    container_name: postgresql-multimodule
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: product_db
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - microservices
+
+volumes:
+  mongodb:
+  postgres:
 
 networks:
-  shared_network:
-    external: true
+  microservices:
+    driver: bridge

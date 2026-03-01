@@ -1,3 +1,6 @@
+server:
+  port: 8091
+  
 spring:
   data:
     mongodb:
@@ -19,7 +22,3 @@ logging:
     name: logs/customer-microservice.log
     max-size: 10MB
     max-history: 30
-
-
-server:
-  port: 8091
