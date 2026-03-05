@@ -33,4 +33,10 @@ build/
 ### VS Code ###
 .vscode/
 
+### Ignore log files ###
+logs/
+
+*.env
+
 paquetes/
+.amazonq/

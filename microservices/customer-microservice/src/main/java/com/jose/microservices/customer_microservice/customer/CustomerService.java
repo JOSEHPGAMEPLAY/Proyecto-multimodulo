@@ -14,7 +14,7 @@ public class CustomerService {
     private final CustomerMapper mapper;
 
     public String saveCustomer(CustomerRequest request) {
-        if (!request.id().isBlank()){
+        if (request.id() != null && !request.id().isBlank()) {
             repository.findById(request.id())
                     .orElseThrow(
                             () -> new CustomerNotFoundException(
