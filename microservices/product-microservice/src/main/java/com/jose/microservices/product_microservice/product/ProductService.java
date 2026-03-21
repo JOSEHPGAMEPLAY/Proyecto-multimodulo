@@ -34,7 +34,7 @@ public class ProductService {
     public ProductResponse getProductById(Integer id) {
         return repository.findById(id)
                 .map(ProductMapper::toProductResponse)
-                .orElseThrow(() -> new ProductNotFoundException("Product with id %s not found".formatted(id)));
+                .orElse(null);
     }
 
     public List<ProductResponse> getProductsByCategoryId(Integer id) {
