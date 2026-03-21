@@ -27,7 +27,7 @@ public class CustomerExceptionHandler extends GlobalExceptionHandler {
 
         log.warn("Customer not found: {}", e.toString());
 
-        return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorResponse(errors));
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorResponse(errors));
     }
 
 }
