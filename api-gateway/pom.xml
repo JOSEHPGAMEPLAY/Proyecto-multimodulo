@@ -10,11 +10,9 @@
 	</parent>
 	<groupId>com.jose</groupId>
 	<artifactId>api-gateway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-		<java.version>25</java.version>
-		<spring-cloud.version>2025.1.1</spring-cloud.version>
-	</properties>
+	<name>api-gateway</name>
+	<description></description>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
