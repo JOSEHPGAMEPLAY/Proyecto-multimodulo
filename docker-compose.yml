@@ -151,9 +151,19 @@ services:
     networks:
       - microservices
 
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "${PROMETHEUS_PORT}:9090"
+    networks:
+      - microservices
+
 volumes:
   mongodb:
   postgres:
+  grafana-data:
 
 networks:
   microservices:
