@@ -32,3 +32,12 @@ spring:
               uri: lb://cart-microservice
               predicates:
                 - Path=/api/v1/*/cart/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, beans, metrics, info, env, prometheus
+  endpoint:
+    health:
+      show-details: always
